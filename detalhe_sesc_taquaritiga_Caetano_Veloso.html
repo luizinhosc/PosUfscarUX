@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bis Detalhes do Evento</title>
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!-- Icons - Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css">
+    
+    <!-- Calendar Control-->
+    <link rel="stylesheet" href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" />
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js"></script>
+    <script src="https://unpkg.com/gijgo@1.9.13/js/messages/messages.pt-br.js"></script>    
+    
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/index.css">
+    
+    <!-- My JS -->
+    <script type="text/javascript" src="js/fonte.js"></script>
+    <script type="text/javascript" src="js/consulta.js"></script>
+
+    <!-- ICON -->
+    <link rel="icon" type="imagem/png" href="img/logo.png" />
+</head>
+<body>
+    <div class="container fonte">
+        <header>    
+            <div class="row">   
+                <div class="col-sm-3">
+                    <a href="./index.html">
+                        <img src="img/logo.png" id="logo" class="img-fluid mx-auto d-block" 
+                        title="BIS - Eventos Culturais"
+                        alt="Logo: BIS - Eventos Culturais" />                        
+                    </a>
+                </div>
+                <div class="col-sm-3 offset-md-6">
+                    <div class="row">
+                        <div class="col-sm-12 text-right">
+                            <div class="btn-group" role="group" aria-label="Exemplo básico">
+                                <!-- Botões de Acessibilidade -->
+                                <button type="button" class="btn btn-secondary fonte" onclick="fonte('a');">A+</button>
+                                <button type="button" class="btn btn-secondary fonte">Tamanho</button>
+                                <button type="button" class="btn btn-secondary fonte" onclick="fonte('d');">A-</button>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-sm-12 text-right">
+                            <button class="btn btn-primary fonte" onclick="login();"> Login</button>   
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>           
+        </header>
+        <hr />
+        
+        <div class="row">
+            <div class="col-sm-12">
+                <a href="./index.html">Home</a>
+                >
+                <a href="./detalhe_sesc_taquaritiga_Caetano_Veloso.html">Detalhes do Evento</a>
+            </div>
+        </div>
+        
+        <br />
+        
+        <section>
+            <div class="row">
+                <div class="col-sm-6"><img class="d-block w-100" src="img/Catanduva.jpg" alt="Sesc Taquaritinga/SP"></div>
+                <div class="col-sm-6"><h1 class="fonte">Caetano Veloso Cover no Sesc São Taquaritinga/SP</h1>
+                    <p class="lead font-weight-normal fonte">21 de Abril de 2019.</p>
+                    <a class="btn btn-success fonte" href="#">Informações</a>
+                </div>
+            </div>
+            
+            <hr />
+            
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="lead font-weight-normal fonte">
+                        Em 21 de Abril, Sesc Taquaritinga – promoverá show cover de um dos maiores cantores do Brasil, Caetano Veloso. Gabriel Conti interpreterá vários sucesso inesquesiveis desse gênio da música
+                    </p>
+                </div>
+            </div>
+            
+            <hr />
+            
+            <div class="row">
+                <h3 class="fonte">VÍDEO DO EVENTO</h3>
+            </div>
+            
+            <div class="row">                
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7KLziulG_4k" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <hr />
+            
+            <div class="row">
+                <h3 class="fonte">LOCALIZAÇÃO</h3>
+            </div>
+            
+            <div class="row">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3714.7969042818936!2d-48.51391188506112!3d-21.397900085799577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b9390dd067f4d1%3A0x184a4a68122ff993!2sPra%C3%A7a+Guilherme+Jos%C3%A9+Franco%2C+Taquaritinga+-+SP%2C+15900-000!5e0!3m2!1spt-BR!2sbr!4v1554942535954!5m2!1spt-BR!2sbr" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+        
+        
+        <footer class="pt-4 my-md-5 pt-md-5 border-top">
+            <div class="row">
+                <div class="col-12 col-md">
+                    <img class="mb-2 fonte" src="img/logo.png" alt="Rodapé - Logo BIS" width="64" height="64">
+                    <small class="d-block mb-3 text-muted fonte">©Copyright BIS | 2019-2019</small>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Empresa</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted fonte" href="./em-construcao.html">Quem Somos</a></li>
+                        <li><a class="text-muted fonte" href="./em-construcao.html">Endereço</a></li>
+                        <li><a class="text-muted fonte" href="./em-construcao.html">Contato</a></li>
+                        <li><a class="text-muted fonte" href="./em-construcao.html">Equipe</a></li>
+                        <li><a class="text-muted fonte" href="./em-construcao.html">Parceiros</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Ajuda</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted fonte" href="./em-construcao.html">Central de Ajuda</a></li>
+                        <li><a class="text-muted fonte" href="./em-construcao.html">Como Anunciar</a></li>
+                        <li><a class="text-muted fonte" href="./em-construcao.html">Mapa do Site</a></li>
+                        <li><a class="text-muted fonte" href="./em-construcao.html">Carreira</a></li>
+                        <li><a class="text-muted fonte" href="./em-construcao.html">Termos e Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Mídias Sociais</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted fonte" href="./em-construcao.html">LinkedIn</a></li>
+                        <li><a class="text-muted fonte" href="./em-construcao.html">Facebook</a></li>
+                        <li><a class="text-muted fonte" href="./em-construcao.html">YouTube</a></li>
+                        <li><a class="text-muted fonte" href="./em-construcao.html">Instagram</a></li>
+                        <li><a class="text-muted fonte" href="./em-construcao.html">Twitter</a></li>
+                        <li><a class="text-muted fonte" href="./em-construcao.html">Whatsapp</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

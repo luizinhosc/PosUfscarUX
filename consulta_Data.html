@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BIS - Eventos Culturais</title>
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!-- Icons - Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css">
+    
+    <!-- Calendar Control-->
+    <link rel="stylesheet" href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" />
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js"></script>
+    <script src="https://unpkg.com/gijgo@1.9.13/js/messages/messages.pt-br.js"></script>    
+    
+    <!-- My CSS-->
+    <link rel="stylesheet" href="css/index.css">
+    
+    <!-- My JS-->
+    <script type="text/javascript" src="js/fonte.js"></script>
+    <script type="text/javascript" src="js/consulta.js"></script>
+
+    <!-- ICON -->
+    <link rel="icon" type="imagem/png" href="img/logo.png" />
+
+</head>
+<body>
+    <div class="container fonte">
+        <header>    
+            <div class="row">   
+                <div class="col-sm-3">
+                    <a href="./index.html">
+                        <img src="img/logo.png" id="logo" class="img-fluid mx-auto d-block" 
+                        title="BIS - Eventos Culturais"
+                        alt="Logo: BIS - Eventos Culturais" />                        
+                    </a>
+                </div>
+                <div class="col-sm-3 offset-md-6">
+                    <div class="row">
+                        <div class="col-sm-12 text-right">
+                            <div class="btn-group" role="group" aria-label="Exemplo básico">
+                                <!-- Botões de Acessibilidade -->
+                                <button type="button" class="btn btn-secondary fonte" onclick="fonte('a');">A+</button>
+                                <button type="button" class="btn btn-secondary fonte">Tamanho</button>
+                                <button type="button" class="btn btn-secondary fonte" onclick="fonte('d');">A-</button>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-sm-12 text-right">
+                            <button class="btn btn-primary fonte" onclick="login();"> Login</button>   
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>           
+        </header>
+        <hr />
+        
+        <div class="row">
+            <div class="col-sm-12">
+                <a href="./index.html">Home</a>
+                >
+                <a href="./consulta_1.html">Consulta</a>
+            </div>
+        </div>
+        
+        <br />
+        
+        <section>
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control fonte" id="evento" name="evento" placeholder="Evento">
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" class="form-control fonte" id="cidade" name="cidade" placeholder="Cidade">
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" class="form-control fonte" id="data-consulta" name="data-consulta" placeholder="Data">
+                    <script>
+                        $('#data-consulta').datepicker({
+                            uiLibrary: 'bootstrap4',
+                            format:'dd/mm/yyyy',
+                            locale: 'pt-br'
+                        });
+                    </script>
+                </div>
+                
+                <div class="form-group col-md-2">
+                    <button class="btn btn-primary fonte" onclick="pesquisa();"><span class="fa fa-search"></span> Pesquisar</button>
+                </div>
+            </div>
+            <div class="alert alert-danger ocultar" role="alert" id="msgPesquisa">
+                <center>Nenhum evento encontrado !!!</center>
+            </div>
+        </section>
+        
+        <br />
+        
+        <section>
+            <div class="row">
+                <div class="col-sm-1">
+                    <figure>
+                        <a href="./consulta_musica.html"><img class="img-fluid mx-auto d-block" src="img/musica.png" title="Música" alt="Categoria Música"></a>
+                        <figcaption class="caption text-center fonte">Música</figcaption>
+                    </figure>
+                </div>
+                
+                <div class="col-sm-1">
+                    <figure>
+                        <a href="./em-construcao.html"><img class="img-fluid mx-auto d-block" src="img/danca.png" title="Dança" alt="Categoria Dança"></a>
+                        <figcaption class="caption text-center fonte">Dança</figcaption>
+                    </figure>
+                </div>
+                
+                <div class="col-sm-1">
+                    <figure>
+                        <a href="./em-construcao.html"><img class="img-fluid mx-auto d-block" src="img/festa.png" title="Festa" alt="Categoria Festa"></a>
+                        <figcaption class="caption text-center fonte">Festa</figcaption>
+                    </figure>
+                </div>
+                
+                <div class="col-sm-1">
+                    <figure>
+                        <a href="./em-construcao.html"><img class="img-fluid mx-auto d-block" src="img/teatro.png" title="Teatro" alt="Categoria Teatro"></a>
+                        <figcaption class="caption text-center fonte">Teatro</figcaption>
+                    </figure>
+                </div>
+                
+                <div class="col-sm-1">
+                    <figure>
+                        <a href="./em-construcao.html"><img class="img-fluid mx-auto d-block" src="img/arte.png" title="Arte" alt="Categoria Arte"></a>
+                        <figcaption class="caption text-center fonte">Arte</figcaption>
+                    </figure>
+                </div>
+                
+                <div class="col-sm-1">
+                    <figure>
+                        <a href="./em-construcao.html"><img class="img-fluid mx-auto d-block" src="img/cinema.png" title="Cinema" alt="Categoria Cinema"></a>
+                        <figcaption class="caption text-center fonte">Cinema</figcaption>
+                    </figure>
+                </div>
+                
+                <div class="col-sm-1">
+                    <figure>
+                        <a href="./em-construcao.html"><img class="img-fluid mx-auto d-block" src="img/moda.png" title="Moda" alt="Categoria Moda"></a>
+                        <figcaption class="caption text-center fonte">Moda</figcaption>
+                    </figure>
+                </div>
+                
+                <div class="col-sm-1">
+                    <figure>
+                        <a href="./em-construcao.html"><img class="img-fluid mx-auto d-block" src="img/foto.png" title="Fotográfia" alt="Categoria Fotográfia"></a>
+                        <figcaption class="caption text-center fonte">Fotográfia</figcaption>
+                    </figure>
+                </div>
+                
+                <div class="col-sm-1">
+                    <figure>
+                        <a href="./em-construcao.html"><img class="img-fluid mx-auto d-block" src="img/cursos.png" title="Cursos" alt="Categoria Cursos"></a>
+                        <figcaption class="caption text-center fonte">Cursos</figcaption>
+                    </figure>
+                </div>
+                
+                <div class="col-sm-1">
+                    <figure>
+                        <a href="./em-construcao.html"><img class="img-fluid mx-auto d-block" src="img/esporte.png" title="Esportes" alt="Categoria Esportes"></a>
+                        <figcaption class="caption text-center fonte">Esportes</figcaption>
+                    </figure>
+                </div>
+                
+                <div class="col-sm-1">
+                    <figure>
+                        <a href="./em-construcao.html"><img class="img-fluid mx-auto d-block" src="img/jogo.png" title="Jogos" alt="Categoria Jogos"></a>
+                        <figcaption class="caption text-center fonte">Jogos</figcaption>
+                    </figure>
+                </div>
+                
+                <div class="col-sm-1">
+                    <figure>
+                        <a href="./em-construcao.html"><img class="img-fluid mx-auto d-block" src="img/comida.png" title="Gastronomia" alt="Categoria Gastronomia"></a>
+                        <figcaption class="caption text-center fonte">Gastro</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        
+        <hr />
+        
+        <section>
+            <br />
+            <div class="row">
+                <h3 class="fonte">Eventos: 12/04/2019</h3>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-sm-4">
+                    <a href="./em-construcao.html" class="custom-card">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="./img/5ca262ba2ca25-xs.jpg" alt="Show Annita">
+                            <div class="card-body">
+                                <p class="card-text fonte">Cervejada Liberada - 10ª Edição - Open Bar de Amstel e Mezanino Heineken</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="./detalhe_sarrada_secreta.html" class="custom-card">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="./img/5c99227216767-xs.png" alt="Homenagem Mariah Carey">
+                            <div class="card-body">
+                                <p class="card-text fonte">A Harry Party está de volta para sua segunda edição.A Sarrada Secreta foi liberada!</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <br /><br /> 
+
+            <div class="alert alert-danger ocultar" role="alert" id="msg">
+                <center>Nenhum novo evento foi encontrado !!!</center>
+            </div>
+
+            <br /><br /> 
+            <div class="row">
+                <div class="col text-center">
+                    <button type="button" class="btn btn-primary fonte" onclick="mensagem();">Carregar Mais</button>
+                </div>
+            </div>
+            <br /> <br />
+        </section>
+        
+        <footer class="pt-4 my-md-5 pt-md-5 border-top">
+            <div class="row">
+                <div class="col-12 col-md">
+                    <img class="mb-2 fonte" src="img/logo.png" alt="Rodapé - Logo BIS" width="64" height="64">
+                    <small class="d-block mb-3 text-muted fonte">©Copyright BIS | 2019-2019</small>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Empresa</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted fonte" href="./em-construcao.html">Quem Somos</a></li>
+                        <li><a class="text-muted fonte" href="./em-construcao.html">Endereço</a></li>
+                        <li><a class="text-muted fonte" href="./em-construcao.html">Contato</a></li>
+                        <li><a class="text-muted fonte" href="./em-construcao.html">Equipe</a></li>
+                        <li><a class="text-muted fonte" href="./em-construcao.html">Parceiros</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Ajuda</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted fonte" href="./em-construcao.html">Central de Ajuda</a></li>
+                        <li><a class="text-muted fonte" href="./em-construcao.html">Como Anunciar</a></li>
+                        <li><a class="text-muted fonte" href="./em-construcao.html">Mapa do Site</a></li>
+                        <li><a class="text-muted fonte" href="./em-construcao.html">Carreira</a></li>
+                        <li><a class="text-muted fonte" href="./em-construcao.html">Termos e Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Mídias Sociais</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted fonte" href="./em-construcao.html">LinkedIn</a></li>
+                        <li><a class="text-muted fonte" href="./em-construcao.html">Facebook</a></li>
+                        <li><a class="text-muted fonte" href="./em-construcao.html">YouTube</a></li>
+                        <li><a class="text-muted fonte" href="./em-construcao.html">Instagram</a></li>
+                        <li><a class="text-muted fonte" href="./em-construcao.html">Twitter</a></li>
+                        <li><a class="text-muted fonte" href="./em-construcao.html">Whatsapp</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
