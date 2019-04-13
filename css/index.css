@@ -1,0 +1,17 @@
+header {
+	margin-top: 1em;
+}
+
+#logo{
+	width: 75%;
+}
+
+a.custom-card,
+a.custom-card:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ocultar {
+	display: none;
+}
